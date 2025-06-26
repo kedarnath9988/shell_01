@@ -25,6 +25,7 @@ VALIDATION_FUNCTION(){
     else 
         echo " installing is Failure  $2..........."
         exit 1 
+    fi 
 }
 
 
