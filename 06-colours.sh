@@ -6,7 +6,7 @@ TIME_STAMP=$(date +%F-%H-%M-%S)
 echo "script name is $SCRIPT_NAME-$TIME_STAMP"
 LOG_FILE=/tmp/$SCRIPT_NAME-$TIME_STAMP.log 
 
-#colurs 
+#colours 
 R="\e[31m"
 Y="\e[32m"
 G="\e[33m"
