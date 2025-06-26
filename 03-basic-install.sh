@@ -2,7 +2,7 @@
 
 USER=$(id -u)
 
-if [$USER -eq 0]
+if [ $USER -eq 0 ]
 then 
     echo "you are super user"
 else 
