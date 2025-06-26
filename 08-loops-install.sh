@@ -27,5 +27,13 @@ my_packages=$@
 for i in $my_packages 
 do 
     echo "package is $i"
+    yum list installed $i &>>$LOG_FILE
+    if [ $? -eq 0 ]
+    then    
+        echo -e  " $Y already installed $i ....... Skipping $N "
+    else 
+        echo -e  "$R need to install $i $N "
+        dnf install $i -y 
+    fi 
 done 
 
