@@ -1,8 +1,8 @@
 #/bin/bash
 
-num=$1
 
-for i in i{1..$num}
+
+for i in i{1..20}
 do 
     echo $i 
 done 
