@@ -24,7 +24,7 @@ echo "packages passed or the command line is $@"
 
 my_packages=$@
 
-for i in {1..$my_packages} 
+for i in $my_packages 
 do 
     echo "package is $i"
 done 
