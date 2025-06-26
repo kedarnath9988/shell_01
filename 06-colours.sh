@@ -10,7 +10,7 @@ LOG_FILE=/tmp/$SCRIPT_NAME-$TIME_STAMP.log
 R="\e[31m"
 N="\e[0m"
 
-if [ USER -eq 0 ]
+if [ $USER -eq 0 ]
 then
     echo -e  " $R you are super user $N"
 else 
