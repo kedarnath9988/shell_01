@@ -6,15 +6,21 @@ TIME_STAMP=$(date +%H-%H-%M-%S)
 echo "ecript name is $SCRIPT_NAME-$TIME_STAMP"
 LOG_FILE=/tmp/$SCRIPT_NAME-$TIME_STAMP.log 
 
+#COLOURS 
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
+
 if [ $USER -eq 0 ]
 then
-    echo "your are super user"
+    echo -e "$G your are super user $N"
 else 
-    echo "your are not super user"
+    echo -e " $R your are not super user $N"
     exit 1 
 fi 
 
-echo "packages passed or the command line is $#"
+echo "packages passed or the command line is $@"
 
 my_packages=$@
 
