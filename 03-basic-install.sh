@@ -12,4 +12,20 @@ fi
 
 dnf install mysql -y 
 
+if [ $? -eq 0 ]
+then
+    echo "installation is successful"
+else 
+    echo "installation is failed"
+    exit 1 
+fi 
+
 dnf remove mysql -y 
+
+if [ $? -eq 0 ]
+then
+    echo "installation is successful"
+else 
+    echo "installation is failed"
+    exit 1 
+fi 
