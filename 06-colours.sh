@@ -8,22 +8,24 @@ LOG_FILE=/tmp/$SCRIPT_NAME-$TIME_STAMP.log
 
 #colurs 
 R="\e[31m"
+Y="\e[32m"
+G="\e[33m"
 N="\e[0m"
 
 if [ $USER -eq 0 ]
 then
-    echo -e  " $R you are super user $N"
+    echo -e  " $G you are super user $N"
 else 
-    echo " you are not super user"
+    echo -e "$R you are not super user $N"
     exit 1 
 fi 
 
 VALIDATION_FUNCTION(){
     if [ $1 -eq 0 ]
     then
-        echo " installing is successfull $2..........."
+        echo -e "$G installing is successfull $2........... $N"
     else 
-        echo " installing is Failure  $2..........."
+        echo -e "$R installing is Failure  $2........... $N"
         exit 1 
     fi 
 }
@@ -34,4 +36,4 @@ dnf install git -y &>>$LOG_FILE
 VALIDATION_FUNCTION $? "installing git" 
 
 dnf install mysql -y  &>>$LOG_FILE
-VALIDATION_FUNCTION $? "installing git"
+VALIDATION_FUNCTION $? "installing mysql "
