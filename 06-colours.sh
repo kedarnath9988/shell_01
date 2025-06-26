@@ -8,8 +8,8 @@ LOG_FILE=/tmp/$SCRIPT_NAME-$TIME_STAMP.log
 
 #colours 
 R="\e[31m"
-Y="\e[32m"
-G="\e[33m"
+Y="\e[33m"
+G="\e[32m"
 N="\e[0m"
 
 if [ $USER -eq 0 ]
