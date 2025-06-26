@@ -2,7 +2,7 @@
 
 age=$1
 
-if [ $age -gt  18]
+if [ $age -gt 18 ]
 then 
     echo "you are eligible for vote & your age is $age"
 else 
