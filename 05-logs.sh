@@ -31,5 +31,3 @@ dnf install mysql -y &> LOG_FILE
 
 VALIDATION_FUNCTION $? "installing mysql"
 
-dnf install yum -y  &> LOG_FILE
-VALIDATION_FUNCTION $? "installing yum "
