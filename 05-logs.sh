@@ -1,8 +1,8 @@
 #!/bin/bash 
 
 USER=$(id -u)
-SCRIPT_NAME=$( $0 | cut -d "." -f1 )
-TIME_STAMP=$($date +%F+%H+%M+%S)
+SCRIPT_NAME=$( echo  $0 | cut -d "." -f1 )
+TIME_STAMP=$( echo $date +%F+%H+%M+%S)
 LOG_FILE=/tmp/$SCRIPT_NAME-$TIME_STAMP.log
 
 
