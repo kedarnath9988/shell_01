@@ -27,7 +27,11 @@ VALIDATION_FUNCTION(){
     fi 
 }
 
-dnf install mysql -y &> LOG_FILE
+dnf install mysql -y &>>$LOG_FILE
 
 VALIDATION_FUNCTION $? "installing mysql"
+
+dnf install git -y &>>$LOG_FILE
+
+VALIDATION_FUNCTION $? "installing git" 
 
