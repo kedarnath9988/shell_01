@@ -10,5 +10,5 @@ echo "the 1st valu is ${my_array[@]}"
 num=$1
 num1=$2
 
-sum=$(( $num + $num1 ))
-echo $sum
+summ=$(( num + num1 ))
+echo $summ
